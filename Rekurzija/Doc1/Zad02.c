@@ -1,6 +1,9 @@
 //Napisati rekurzivnu funkciju int brojParnih(int x) koja racuna broj parnih cifara datog cijelog broja x
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 
-int projParnih(int x) {
+int brojParnih(int x) {
 
     if(x < 10) {
         if(x % 2 == 0) {
@@ -16,4 +19,9 @@ int projParnih(int x) {
         return brojParnih(x / 10);  //samo nastavi sa x / 10 bez dodavanja
     }
     
+}
+
+int main(){
+    int bp = brojParnih(1234);
+    printf("%d", bp);
 }
