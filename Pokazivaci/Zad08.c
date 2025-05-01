@@ -28,3 +28,22 @@ void svakaNTa(char *ime, int n) {
     }
     fclose(f);      //kad zavrsimo, zatvaramo fajl da ne ostane otvoren u memoriji
 }
+
+int main(int argc, char *argv[]) {  //0 - ime programa, 1 - ime fajla, 2 - broj n
+    if (argc != 3) {
+        fprintf(stderr, "-1\n");
+        return -1;
+    }
+
+    char *ime = argv[1];       //argv[1] sadrzi ime fajla(kao tekst), smjestamo ga u pokazivac ime da bude lakse da ga koristimo
+    int n = atoi(argv[2]);     //argv[2] je tekst(string) npr. "3", ali ga atoi pretvara u broj(int), pa je sada n = 3
+
+    if (n <= 0) {
+        fprintf(stderr, "-1\n");
+        return -1;
+    }
+
+    svakaNTa(ime, n);
+
+    return 0;
+}
