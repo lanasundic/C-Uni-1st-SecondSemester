@@ -1,0 +1,1 @@
+//Napisati rekurzivnu f-ju void obrniNiz(int* a, int n) koja obrce niz brojeva (niz alocirati dinamicki)

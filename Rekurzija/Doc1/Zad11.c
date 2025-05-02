@@ -1,0 +1,1 @@
+//Napisati rekurzivnu f-ju skalarniProizvod(int* a, int* b, int n) koja izracunava skalarni proizvod dva data vektora (predstavljena nizovima duzine n).

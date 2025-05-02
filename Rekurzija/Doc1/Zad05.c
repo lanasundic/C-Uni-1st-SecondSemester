@@ -1,0 +1,2 @@
+//Napisati rekurzivnu f-ju void napraviNiz(int* krajNiza, int broj) koja kreira niz cifara datog cijelog broja. Napisati rekurzivnu f-ju void ispisiNiz(int* niz, int n)
+//koja ispisuje elemente niza duzine n. Testirati obje f-je pozivom iz glavnog programa

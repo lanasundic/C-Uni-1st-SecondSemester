@@ -5,7 +5,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+/*
+int najvecaCifra(int x) {
+    if(x < 10) {
+        return x;   //ako broj ima samo jednu cifru, taj je i najveci
+    }
 
+    int zadnjaCifra = x % 10;
+    int najvecaOdOstalih = najvecaCifra(x / 10);
+
+    if(zadnjaCifra > najvecaOdOstalih) {
+        return zadnjaCifra;
+    } else {
+        return najvecaOdOstalih;
+    }
+}
+*/
 int najvecaCifra(int x) {
     if(x < 10) {
         return x;

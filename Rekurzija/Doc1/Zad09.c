@@ -1,0 +1,1 @@
+//Napisati rekurzivnu f-ju int palindrom(int* a, int n) koja ispituje da li su elementi nekog niza brojeva poredjani palindromski(isto od naprijed i od pozadi).
