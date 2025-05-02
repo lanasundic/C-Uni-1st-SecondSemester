@@ -10,13 +10,19 @@ int izmijeni(int n) {
     if (n == 0) {   //zaustavi rekurziju kada vise nema cifara u broju n
         return 0;
     }
-    int cifra = n % 10; //uzmi posljednju cifru od n
-    if(cifra % 2 == 0) {    //ako je cifra parna
-        cifra /= 2;         //podijeli je da 2
+    int posljednjaCifra = n % 10; //uzmi posljednju cifru od n
+    if(posljednjaCifra % 2 == 0) {    //ako je cifra parna
+        posljednjaCifra /= 2;         //podijeli je da 2
     }
-    izmijeni(n / 10) * 10 + cifra;
+    return izmijeni(n / 10) * 10 + posljednjaCifra;
 }
 
 int main(int argc, char *argv[]) {  //argc - broj argumenata, argv - niz stringova, npr. argv[1] je broj koji korisnik unese
+    int n;
+    printf("Unesi n:\n");
+    scanf("%d", &n);
 
+    printf("%d", izmijeni(n));
+
+    return 0;
 }

@@ -29,15 +29,13 @@ int promijeniZnak(int x) {
 
 //f-ja koja mijenja svaki element niza tako sto na njega primjenjuje f-ju modifikacija
 void modifikuj(int* niz, int n, int (*modifikacija)(int)) { //f-ja koja: prima niz brojeva(int* niz), prima broj elemenata(int n), prima pokazivac na f-ju koja uzima 1 int i vraca 1 int ---> int(*modifikacija)(int)
-	int i;
-	for(i=0; i<n; i++) {
+	for(int i=0; i<n; i++) {
 		niz[i] = modifikacija(niz[i]);  //element = nova_vrednost(element)
 	}
  }
 
  void stampaj(int* niz, int n) {  //moj niz i koliko el ima niz
-    int i;
-    for(i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         printf("%d ", niz[i]);
     }
     printf("\n");
@@ -60,6 +58,14 @@ void modifikuj(int* niz, int n, int (*modifikacija)(int)) { //f-ja koja: prima n
     for(int i = 0; i < n; i++) {    //ucitavanje elemenata niza
         scanf("%d", &niz[i]);
     }
+
+    modifikuj(niz, n, &uvecajZa1);
+    modifikuj(niz, n, &kvadriraj);
+    modifikuj(niz, n, &promijeniZnak);
+
+    stampaj(niz, n);
+
+    return 0;
  }
 
  /*

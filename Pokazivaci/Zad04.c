@@ -15,12 +15,14 @@ int veciOdProsjeka() {
     int *p = brojevi;   //pokazivac na prvi element niza brojevi(ili neki element)
 
     while (1) {     //znaci da petlja traje beskonacno sve dok se eksplicitno ne prekine sa break npr. Ova petlja je u osnovi infinite loop, koja omogućava da unosimo brojeve jedan za drugim bez unapred određenog broja unosa.
-        if(scanf("%d", &broj) != 1) {
+        int rezUnosa = scanf("%d", &broj);
+        
+        if(rezUnosa != 1) {
             fprintf(stderr, "-1\n");
             return -1;
         }
 
-        if(broj == 0) {     //ako nema unijetih brojeva treba da vrati 0
+        if(broj == 0) {     //dok korisnik ne unese 0
             break;
         }
 

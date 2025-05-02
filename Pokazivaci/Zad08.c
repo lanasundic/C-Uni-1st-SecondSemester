@@ -12,7 +12,7 @@ U slucaju greske na standardni izlaz za greske ispisati -1.
 //prima ime fajla i broj, otvara fajl i cita rijeci jednu po jednu, na kraju ispisuje svaku n-tu rijec
 void svakaNTa(char *ime, int n) {
     FILE *f = fopen(ime, "r");      //FILE *f - pokazivac koji pokazuje na taj fajl,    otvori fajl za citanje("r" - read)
-    if (f == NULL || n <= 0) {      
+    if (f == NULL || n <= 0) {
         fprintf(stderr, "-1\n");
         return;
     }

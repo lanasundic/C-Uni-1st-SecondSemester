@@ -18,7 +18,9 @@ int main(int argc, char *argv[]) {
     char *rijec = argv[2];      //drugi argument: rijec koju obradjujemo
     char *p = rijec;            //pokazivac p pokazuje na prvi karakter rijeci
 
-    if(strcpm(opcija, "-m") == 0) {     //ako su stringovi identicni, strcmp() vraca 0
+    printf("%s", p);
+
+    if(strcmp(opcija, "-m") == 0) {     //ako su stringovi identicni, strcmp() vraca 0
         while(*p) {
             *p = tolower(*p);
             p++;    //zasto ovdje nismo stavili *p?
